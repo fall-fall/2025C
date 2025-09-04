@@ -1,0 +1,74 @@
+% \documentclass{cumcmthesis}
+\documentclass[withoutpreface,bwprint]{cumcmthesis} %去掉封面与编号页，电子版提交的时候使用。
+
+
+\usepackage[noend]{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{url}   % 网页链接
+\usepackage{subcaption} % 子标题
+\usepackage{threeparttable} 
+\usepackage[table]{xcolor}
+
+
+\title{基于机器学习与关联网络的古代玻璃成分分析}
+\tihao{A}
+\baominghao{4321}
+\schoolname{XX大学}
+\membera{ }
+\memberb{ }
+\memberc{ }
+\supervisor{ }%辅导老师
+\yearinput{2023}
+\monthinput{9}
+\dayinput{8}
+\setcounter{tocdepth}{2}
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+
+古代玻璃的化学成分是鉴别其类别与产地的重要依据，然而风化作用会改变原始成分，为定量分析带来挑战。本文基于一批古代玻璃制品的化学成分数据，建立了一套多层次的数学模型，以解决风化影响下的玻璃分类、成分预测与内在关联分析问题。研究综合运用了统计检验、机器学习、智能优化算法与复杂网络理论，为通过化学成分数据理解古代玻璃制品提供了系统性的分析方案。
+
+
+对于问题一，我们采用\textbf{卡方检验}分析了表面风化与玻璃类型、纹饰及颜色的关联性，确认了它们之间存在统计学关联。通过对比风化前后样本的化学成分分布，发现风化主要导致高钾玻璃中的氧化钾与铅钡玻璃中的氧化铅和氧化钡流失。为预测风化前的成分，本文引入\textbf{地球化学领域}的\textbf{质量平衡分析理论}，构建了基于风化系数的预测模型，该模型在缺乏成对样本的情况下，能够有效恢复文物的原始化学成分。
+
+
+对于问题二，为研究两大类玻璃的分类规律，我们分别构建了\textbf{线性与非线性支持向量机模型}。其中，非线性模型获得了97.41\%的交叉验证准确率，我们引入\textbf{博弈论中的SHAP值}对其进行解释，而线性模型的结果则直接验证了氧化铅与氧化钾是分类的核心指标。在亚类划分中，我们依据\textbf{变异系数}筛选特征，并结合\textbf{层次聚类}与\textbf{轮廓系数}，确定铅钡玻璃存在两个亚类，高钾玻璃存在五个亚类。划分结果显示铅钡玻璃可分为高铅钡助熔剂型与高硅基质型，高钾玻璃的亚类则在多种成分上表现出不同特征。
+
+
+对于问题三，我们构建了基于\textbf{改进遗传算法}优化的\textbf{支持向量机分类器IGA-SVM}，以鉴别未知类别文物的所属类型。该模型通过智能化全局寻优确定最优超参数组合，避免了传统模型选择的局限性。应用此模型，我们完成了对全部未知样本的分类。为确保结果的可靠性，我们设计了基于\textbf{蒙特卡洛模拟}的数据扰动与基于\textbf{参数网格搜索}的模型扰动双重灵敏度分析，验证了分类结果对于数据测量误差和模型参数选择的高度稳健性。
+
+
+对于问题四，为探寻不同类别玻璃配方的内在结构差异，我们构建了\textbf{化学成分关联网络}。为消除成分数据总和恒定带来的虚假相关，我们首先采用化学计量学中的\textbf{中心化对数比变换}对数据进行处理。随后利用\textbf{图套索算法}计算偏相关系数以构建网络，并应用\textbf{鲁汶算法}进行社群发现。网络分析结果表明，铅钡玻璃与高钾玻璃的化学成分关联结构存在显著不同，前者以二氧化硅和氧化铅为核心形成紧密社群，后者则结构较为分散，这些差异反映了两者在原料与烧制工艺上的区别。网络分析结果表明，铅钡玻璃与高钾玻璃的化学成分关联结构存在显著不同，前者以二氧化硅和氧化铅为核心形成紧密社群，后者则结构较为分散，这些差异反映了两者在原料与烧制工艺上的区别。
+
+\keywords{卡方检验 \quad 地球化学 \quad 质量平衡分析理论  \quad SHAP值 \quad 支持向量机 \quad 中心化对数比 \quad 图套索算法 \quad 鲁汶算法}
+
+
+\end{abstract}
+
+
+\input{contents/1前置}
+\input{contents/2模型准备}
+\input{contents/3问题一}
+\input{contents/4问题二}
+\input{contents/5问题三}
+\input{contents/6问题四}
+
+
+\newpage
+
+% 参考文献
+\bibliographystyle{plain}
+\bibliography{reference}
+
+\newpage
+
+\end{document}
