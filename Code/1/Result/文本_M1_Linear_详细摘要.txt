@@ -1,0 +1,26 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 Y染色体浓度   R-squared:                       0.040
+Model:                            OLS   Adj. R-squared:                  0.038
+Method:                 Least Squares   F-statistic:                     19.85
+Date:                Sun, 07 Sep 2025   Prob (F-statistic):           3.58e-09
+Time:                        01:02:46   Log-Likelihood:                 1999.2
+No. Observations:                 962   AIC:                            -3992.
+Df Residuals:                     959   BIC:                            -3978.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.1277      0.013      9.925      0.000       0.102       0.153
+GW             0.0010      0.000      4.034      0.000       0.001       0.002
+BMI           -0.0021      0.000     -5.281      0.000      -0.003      -0.001
+==============================================================================
+Omnibus:                       35.411   Durbin-Watson:                   0.886
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               22.071
+Skew:                           0.231   Prob(JB):                     1.61e-05
+Kurtosis:                       2.420   Cond. No.                         477.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
