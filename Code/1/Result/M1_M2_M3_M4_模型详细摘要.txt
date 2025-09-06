@@ -1,0 +1,109 @@
+======================================== M1_线性回归 ========================================
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 Y染色体浓度   R-squared:                       0.040
+Model:                            OLS   Adj. R-squared:                  0.038
+Method:                 Least Squares   F-statistic:                     19.85
+Date:                Sat, 06 Sep 2025   Prob (F-statistic):           3.58e-09
+Time:                        19:35:27   Log-Likelihood:                 1999.2
+No. Observations:                 962   AIC:                            -3992.
+Df Residuals:                     959   BIC:                            -3978.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.1277      0.013      9.925      0.000       0.102       0.153
+孕周             0.0010      0.000      4.034      0.000       0.001       0.002
+孕妇BMI         -0.0021      0.000     -5.281      0.000      -0.003      -0.001
+==============================================================================
+Omnibus:                       35.411   Durbin-Watson:                   0.886
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               22.071
+Skew:                           0.231   Prob(JB):                     1.61e-05
+Kurtosis:                       2.420   Cond. No.                         477.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+======================================== M2_多项式回归 ========================================
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 Y染色体浓度   R-squared:                       0.041
+Model:                            OLS   Adj. R-squared:                  0.038
+Method:                 Least Squares   F-statistic:                     13.49
+Date:                Sat, 06 Sep 2025   Prob (F-statistic):           1.25e-08
+Time:                        19:35:27   Log-Likelihood:                 1999.6
+No. Observations:                 962   AIC:                            -3991.
+Df Residuals:                     958   BIC:                            -3972.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.1454      0.024      6.141      0.000       0.099       0.192
+孕周            -0.0011      0.002     -0.457      0.648      -0.006       0.004
+GW_sq        5.78e-05   6.48e-05      0.892      0.372   -6.93e-05       0.000
+孕妇BMI         -0.0021      0.000     -5.282      0.000      -0.003      -0.001
+==============================================================================
+Omnibus:                       37.196   Durbin-Watson:                   0.883
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               23.057
+Skew:                           0.239   Prob(JB):                     9.85e-06
+Kurtosis:                       2.411   Cond. No.                     7.87e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 7.87e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+======================================== M3_指数回归 ========================================
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:         np.log(Y染色体浓度)   R-squared:                       0.034
+Model:                            OLS   Adj. R-squared:                  0.032
+Method:                 Least Squares   F-statistic:                     17.04
+Date:                Sat, 06 Sep 2025   Prob (F-statistic):           5.36e-08
+Time:                        19:35:27   Log-Likelihood:                -573.15
+No. Observations:                 962   AIC:                             1152.
+Df Residuals:                     959   BIC:                             1167.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -1.9149      0.186    -10.269      0.000      -2.281      -1.549
+孕周             0.0124      0.004      3.408      0.001       0.005       0.019
+孕妇BMI         -0.0291      0.006     -5.108      0.000      -0.040      -0.018
+==============================================================================
+Omnibus:                       71.306   Durbin-Watson:                   0.878
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               85.512
+Skew:                          -0.708   Prob(JB):                     2.70e-19
+Kurtosis:                       3.358   Cond. No.                         477.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+======================================== M4_优化混合效应模型 ========================================
+         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Y染色体浓度   
+No. Observations:  962     Method:             ML       
+No. Groups:        261     Scale:              0.0002   
+Min. group size:   1       Log-Likelihood:     2367.6361
+Max. group size:   5       Converged:          Yes      
+Mean group size:   3.7                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      0.119    0.022  5.471 0.000  0.076  0.161
+孕周            -0.004    0.001 -3.639 0.000 -0.007 -0.002
+孕妇BMI         -0.001    0.001 -1.670 0.095 -0.002  0.000
+GW_sq          0.000    0.000  6.532 0.000  0.000  0.000
+孕妇代码 Var       0.002    0.022                           
+孕妇代码 x 孕周 Cov -0.000    0.001                           
+孕周 Var         0.000    0.000                           
+========================================================
+
+
