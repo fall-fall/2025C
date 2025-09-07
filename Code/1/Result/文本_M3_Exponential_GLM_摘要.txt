@@ -6,7 +6,7 @@ Model Family:                   Gamma   Df Model:                            2
 Link Function:                    log   Scale:                         0.15157
 Method:                          IRLS   Log-Likelihood:                 2005.1
 Date:                Sun, 07 Sep 2025   Deviance:                       167.29
-Time:                        09:16:21   Pearson chi2:                     145.
+Time:                        10:00:13   Pearson chi2:                     145.
 No. Iterations:                     8   Pseudo R-squ. (CS):            0.04325
 Covariance Type:            nonrobust                                         
 ==============================================================================
