@@ -48,7 +48,7 @@ XGBoost是梯度提升框架下的一种算法实现。它属于集成学习方�
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.8\textwidth]{figs/6问题四/图10_模型ROC曲线对比.png}
+\includegraphics[width=0.8\textwidth]{figs/6问题四/模型_ROC曲线_原始版.png}
 \caption{模型ROC曲线对比}
 \label{fig:roc_curve}
 \end{figure}
@@ -57,7 +57,7 @@ XGBoost是梯度提升框架下的一种算法实现。它属于集成学习方�
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=1\textwidth]{figs/6问题四/图11_模型混淆矩阵对比.png}
+\includegraphics[width=1\textwidth]{figs/6问题四/各模型_混淆矩阵_离散颜色.png}
 \caption{模型混淆矩阵对比}
 \label{fig:confusion_matrix_comp}
 \end{figure}
@@ -71,16 +71,17 @@ XGBoost是梯度提升框架下的一种算法实现。它属于集成学习方�
 \label{tab:model_performance}
 \begin{tabular}{lcccc}
 \toprule
-模型 & 精确率 & 召回率 & F1分数 & AUC \\
+模型名称 & 异常类精确率 & 异常类召回率 & 异常类F1分数 & AUC \\
 \midrule
-LogisticRegression & 0.409 & 0.474 & 0.439 & 0.805 \\
-DecisionTree & 0.237 & 0.474 & 0.316 & 0.671 \\
-XGBoost & 0.385 & 0.263 & 0.313 & 0.692 \\
+逻辑回归 & 0.4091 & 0.4737 & 0.4390 & 0.8045 \\
+决策树 & 0.2034 & 0.6316 & 0.3077 & 0.6915 \\
+XGBoost & 0.4167 & 0.2632 & 0.3226 & 0.6966 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\cref{tab:model_performance}对各模型针对异常样本的各项性能指标进行了量化总结。根据此表，逻辑回归与决策树在首要指标召回率上均达到0.474，并列最高。为作出最终选择，需要比较次要指标。逻辑回归的F1分数为0.439，高于决策树的0.316，这表明逻辑回归在精确率与召回率之间取得了更好的平衡。同时，逻辑回归的精确率为0.409，同样高于决策树的0.237，并且其AUC值0.805也是三者中最高的。因此，基于各项关键评估维度的数值，逻辑回归模型被选定为最终的判定模型。
+\cref{tab:model_performance}对各模型在测试集上的性能指标进行了量化总结。数据显示，决策树模型虽然获得了最高的异常类召回率0.6316，但其精确率仅为0.2034，是三者中最低的，这表明该模型倾向于将大量正常样本误判为异常。相比之下，逻辑回归模型在各项指标上表现出更优的综合性能：其异常类F1分数0.4390和AUC值0.8045均为最高，这意味着它在精确率和召回率之间取得了最优的平衡，且整体判别能力最强。尽管XGBoost的精确率略高于逻辑回归，但其召回率过低，导致F1分数不理想。综合考量，逻辑回归模型因其平衡性和整体性能，被选定为最终的判定模型。
+
 
 
 
@@ -95,14 +96,14 @@ g(z') = \phi_0 + \sum_{j=1}^{M} \phi_j z'_j
     \centering
     \begin{minipage}[t]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs/6问题四/图12_逻辑回归特征重要性.png}
-        \caption{逻辑回归模型特征重要性排序}
+        \includegraphics[width=\textwidth]{figs/6问题四/逻辑回归_特征系数_立式颜色条.png}
+        \caption{逻辑回归模型特征系数排序}
         \label{fig:feature_importance}
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs/6问题四/图12_SHAP摘要图.png}
+        \includegraphics[width=\textwidth]{figs/6问题四/逻辑回归_SHAP_摘要图.png}
         \caption{SHAP摘要图}
         \label{fig:shap_summary}
     \end{minipage}
