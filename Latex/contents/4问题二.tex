@@ -60,7 +60,7 @@ E[P_{fail, group}(t)] = \frac{1}{n_{group}} \sum_{i \in group} P_{fail, i}(t)
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.8\textwidth]{figs/4问题二/图4_30个孕妇个体概率趋势.png}
+\includegraphics[width=0.8\textwidth]{figs/4问题二/图4_个体概率趋势_渐变曲线图.png}
 \caption{混合效应模型预测的个体Y染色体浓度达标概率变化轨迹}
 \label{fig:q2_individual_prob}
 \end{figure}
@@ -89,7 +89,7 @@ E[P_{fail, group}(t)] = \frac{1}{n_{group}} \sum_{i \in group} P_{fail, i}(t)
     \hfill
     \begin{minipage}[t]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs/4问题二/图3_不同K值总风险对比.png}
+        \includegraphics[width=\textwidth]{figs/4问题二/图3_不同K值总风险对比_美化版.png}
         \caption{不同分组数K对应的加权平均总风险}
         \label{fig:q2_k_comparison}
     \end{minipage}
@@ -101,19 +101,16 @@ E[P_{fail, group}(t)] = \frac{1}{n_{group}} \sum_{i \in group} P_{fail, i}(t)
 
 \begin{figure}[h!]
     \centering
-    \begin{minipage}[t]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs/4问题二/图2_最优分组数K7_BMI聚类结果.png}
-        \caption{最优分组数K等于7时基于BMI的聚类结果}
-        \label{fig:q2_clusters}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs/4问题二/图1_最优分组方案期望风险曲线.png}
-        \caption{最优分组方案下各群组的期望风险曲线}
-        \label{fig:q2_risk_curves}
-    \end{minipage}
+    \includegraphics[width=0.8\textwidth]{figs/4问题二/图2_最优分组数K7_BMI聚类结果_美化版.png}
+    \caption{最优分组数K等于7时基于BMI的聚类结果}
+    \label{fig:q2_clusters}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/4问题二/图1_最优分组方案期望风险曲线_最终版.png}
+    \caption{最优分组方案下各群组的期望风险曲线}
+    \label{fig:q2_risk_curves}
 \end{figure}
 
 在最优分组数确定为7后，对孕妇BMI进行聚类的结果如\cref{fig:q2_clusters}所示。图中每个样本点根据其所属群组被赋予不同颜色，七个群组沿孕妇BMI轴向分布，形成了七个相互邻接的区间。
@@ -148,14 +145,14 @@ E[P_{fail, group}(t)] = \frac{1}{n_{group}} \sum_{i \in group} P_{fail, i}(t)
 \centering
 \begin{minipage}[t]{0.48\textwidth}
 \centering
-\includegraphics[width=\textwidth]{figs/4问题二/图5_敏感性分析_delta_t.png}
+\includegraphics[width=\textwidth]{figs/4问题二/图5_敏感性分析_delta_t_美化版.png}
 \caption{机会成本时间延迟$\Delta t$的敏感性分析}
 \label{fig:q2_sens_delta_t}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.48\textwidth}
 \centering
-\includegraphics[width=\textwidth]{figs/4问题二/图6_敏感性分析_threshold.png}
+\includegraphics[width=\textwidth]{figs/4问题二/图6_敏感性分析_threshold_美化版.png}
 \caption{Y染色体浓度阈值对最佳检测时点的影响分析}
 \label{fig:q2_sens_threshold}
 \end{minipage}
